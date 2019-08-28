@@ -1,0 +1,9 @@
+<h1>{{ question.question }}</h1>
+
+<ul>
+{% for choice in question.choice_set.all %}
+<li>{{ choice.choice }} - {{ choice.votes }} vote{{choice.votes|pluralize}}</li>
+{% endfor %}
+
+<button type="button" action="">Vote Again?</button>
+</ul>
